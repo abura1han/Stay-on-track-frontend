@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import GoogleLogin from "react-google-login";
 import configs from "../configs";
 import BtnPrimary from "./BtnPrimary";
-import Button from "./Button";
 
 const GoogleLoginBtn = ({ label }) => {
   const [userData, setUserData] = useState(
