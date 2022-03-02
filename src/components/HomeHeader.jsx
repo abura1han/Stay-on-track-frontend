@@ -9,7 +9,7 @@ const HomeHeader = () => {
   const handleSmallDeviceNavigation = () => setIsNavOpen(!isNavOpen);
 
   return (
-    <header>
+    <header id="header">
       <nav className="flex justify-between w-full">
         <div className="flex justify-between w-full sm:w-auto">
           {/* Small device navigation */}
@@ -20,21 +20,20 @@ const HomeHeader = () => {
             {isNavOpen && (
               <ul className="block absolute left-0 top-20 w-full pl-5 pr-2 py-4 bg-gray-400">
                 <li className="block w-full font-medium text-base text-gray-50 my-2">
+                  <a href="#header">Home</a>
+                </li>
+                <li className="block w-full font-medium text-base text-gray-50 my-2">
                   <a href="#features">Features</a>
+                </li>
+                <li className="block w-full font-medium text-base text-gray-50 my-2">
+                  <a href="#why-we-r">Why we are</a>
                 </li>
                 <li className="block w-full font-medium text-base text-gray-50 my-2">
                   <a href="#Guides-dn-tutorials">Guides {"&"} tutorials</a>
                 </li>
-                <li className="block w-full font-medium text-base text-gray-50 my-2">
-                  <a href="#blog">Blog</a>
-                </li>
-                <li className="block w-full font-medium text-base text-gray-50 my-2">
-                  <a href="#contact-us">Contact us</a>
-                </li>
-
                 {/* Login and signup button for extra small devices like samsung galaxy fold */}
                 <li className="block w-full font-medium text-base text-gray-50 my-2 mt-5">
-                  <GoogleLoginBtn label={"Get started"} />{" "}
+                  <GoogleLoginBtn label={"Get started"} />
                 </li>
               </ul>
             )}
@@ -52,16 +51,16 @@ const HomeHeader = () => {
           <div className="items-center hidden md:flex">
             <ul className="flex">
               <li className="font-medium text-base text-gray-700 mx-4">
+                <a href="#Header">Home</a>
+              </li>
+              <li className="font-medium text-base text-gray-700 mx-4">
                 <a href="#features">Features</a>
               </li>
               <li className="font-medium text-base text-gray-700 mx-4">
+                <a href="#why-we-r">Why we are</a>
+              </li>
+              <li className="font-medium text-base text-gray-700 mx-4">
                 <a href="#guides-nd-tutorials">Guides {"&"} tutorials</a>
-              </li>
-              <li className="font-medium text-base text-gray-700 mx-4">
-                <a href="#blog">Blog</a>
-              </li>
-              <li className="font-medium text-base text-gray-700 mx-4">
-                <a href="#contact-us">Contact us</a>
               </li>
             </ul>
           </div>

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import GoogleLogin from "react-google-login";
 import configs from "../configs";
+import BtnPrimary from "./BtnPrimary";
 import Button from "./Button";
 
 const GoogleLoginBtn = ({ label }) => {
@@ -66,27 +67,21 @@ const GoogleLoginBtn = ({ label }) => {
     <>
       {!isLogin ? (
         <GoogleLogin
-          clientId={configs.clientId}
           render={(renderProps) => (
-            <Button
-              className="bg-stay-primary text-white"
+            <BtnPrimary
               onClick={renderProps.onClick}
               disabled={renderProps.disabled}
             >
-              {label ? label : "Sign in"}
-            </Button>
+              Continue with google
+            </BtnPrimary>
           )}
+          clientId={configs.clientId}
           onSuccess={handleGoogleLoginSuccess}
           onFailure={handleGoogleLoginFailure}
           cookiePolicy={"single_host_origin"}
         />
       ) : (
-        <Button
-          onClick={handleGoogleLogout}
-          className="bg-stay-primary text-white"
-        >
-          Logout
-        </Button>
+        <BtnPrimary onClick={handleGoogleLogout}>Logout</BtnPrimary>
       )}
     </>
   );
