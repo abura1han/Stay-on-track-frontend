@@ -14,6 +14,7 @@ import NotificationContext from "./contexts/NotificationContext";
 import StayNotification from "./components/StayNotification";
 import HabitTrackerPage from "./pages/HabitTrackerPage";
 import ProfilePage from "./pages/ProfilePage";
+import Concentration from "./pages/Concentration";
 
 /**
  * Serve all routes
@@ -110,6 +111,18 @@ function App() {
                     <ProtectedRoute>
                       <StayWrapper>
                         <HabitTrackerPage />
+                      </StayWrapper>
+                    </ProtectedRoute>
+                  }
+                />
+
+                {/* Concentration route */}
+                <Route
+                  path="/stay/concentration"
+                  element={
+                    <ProtectedRoute>
+                      <StayWrapper>
+                        <Concentration />
                       </StayWrapper>
                     </ProtectedRoute>
                   }
